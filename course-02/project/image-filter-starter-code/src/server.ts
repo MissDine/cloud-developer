@@ -29,7 +29,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   //   the filtered image file [!!TIP res.sendFile(filteredpath); might be useful]
 
   /**************************************************************************** */
-  app.get("https://www.instagram.com/p/CLhwv0Il9_oboVMkWJBTQJLzk7WPfg-3PtkCdg0/", async (req: Request, res: Response)=>{
+  app.get("/filteredimage", async (req: Request, res: Response)=>{
     const image_url = req.query.image_url.toString();
     if(!image_url){
       res.status(404).send("Image url is required");
